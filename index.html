@@ -5,20 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Guess Number</title>
     <link rel="stylesheet" href="./styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <h1>Adivina el número</h1>
+    <div class="game">
+        <h1 class="title">Adivina el número</h1>
 
-    <form action="">
-        <label for="number">Introduce aquí tu número:</label>
-        <input type="number" class="js-human-number" placeholder="Number between 0 and 100">
-        <input type="submit" value="Prueba" class="js-button">
-    </form>
-    <p class="result">Pista: Escribe el número y dale a Prueba</p>
-    <p>Número de intentos: <span class="attempts"></span></p>
+        <form class="form">
+            <label for="number">Introduce aquí tu número:</label>
+            <input type="number" class="js-human-number human-number" placeholder="Entre 0 y 100">
+            <button class="js-button btn">Prueba</button>
+        </form>
+        <p class="result">Pista: Escribe el número y dale a Prueba</p>
+    </div>
+    <div class="attempts">
+        <p >Número de intentos: <span class="js-attempts number__attempts"></span></p>
+        <p class="js-finish"></p>
+        <p class="number">Tienes 10 intentos</p>
+    </div>
     <script src="./js/main.js"></script>
 </body>
 

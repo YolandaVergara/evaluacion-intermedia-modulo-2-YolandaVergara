@@ -1,0 +1,71 @@
+body {
+  font-family: 'Press Start 2P', cursive;
+  background-image: url('../images/background.png');
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin: 20px;
+  background-color: white;
+  width: 50vw;
+  border-radius: 15px;
+}
+
+.title {
+  text-align: center;
+}
+
+.result {
+  font-size: 10px;
+}
+
+.human-number {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  padding: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.btn {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.attempts {
+  padding: 10px;
+  margin: 20px;
+  background-color: yellow;
+  width: 30vw;
+  border-radius: 15px;
+}
+
+
+.number__attempts {
+  animation-name: flicker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+}
+
+.number {
+  font-size: 10px;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 1.0;
+  }
+
+  50% {
+    opacity: 0.0;
+  }
+
+  100% {
+    opacity: 1.0;
+  }
+}
