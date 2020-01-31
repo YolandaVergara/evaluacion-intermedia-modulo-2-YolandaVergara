@@ -1,12 +1,13 @@
 "use strict";
-//función que genera el número
-const randomNumber = Math.ceil(Math.random() * 100);
-const guessButton = document.querySelector(".js-button");
-console.log(randomNumber);
-function guessNumber() {
-  const humanNumber = document.querySelector(".js-human-number");
-  const result = document.querySelector(".result");
 
+const guessButton = document.querySelector(".js-button");
+const humanNumber = document.querySelector(".js-human-number");
+const result = document.querySelector(".result");
+const reset = document.querySelector(".js-reset");
+
+//función que genera un juego nuevo
+function guessNumber() {
+  const randomNumber = Math.ceil(Math.random() * 100);
   if (
     humanNumber.value < 0 ||
     humanNumber.value > 100 ||
@@ -25,6 +26,7 @@ function guessNumber() {
 
 }
 
+//función que arranca el contador
 let totalAttempts = 0;
 function numAttempts() {
   const counterUp = document.querySelector(".js-attempts");
@@ -37,11 +39,19 @@ function numAttempts() {
   counterUp.innerHTML = `${totalAttempts}`;
 }
 
+//función que resetea el juego
+function resetGame() {
+  totalAttempts = 0;
+  humanNumber.value = "";
+  guessNumber();
+}
+
+//función que arranca el juego
 function game(event) {
   event.preventDefault();
-  guessNumber();
-
+    guessNumber();
 }
 
 guessButton.addEventListener("click", game);
+reset.addEventListener("click", resetGame);
 
